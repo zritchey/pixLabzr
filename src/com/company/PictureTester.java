@@ -18,6 +18,34 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+  public static void testKeepOnlyBlue(){
+    Picture beach=new Picture("beach.jpg");
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  public static void testKeepOnlyRed(){
+    Picture beach=new Picture("beach.jpg");
+    beach.keepOnlyRed();
+    beach.explore();
+  }
+  public static void testKeepOnlyGreen(){
+    Picture beach=new Picture("beach.jpg");
+    beach.keepOnlyGreen();
+    beach.explore();
+  }
+  public static void testNegate(){
+    Picture beach=new Picture("beach.jpg");
+    beach.negate();
+    beach.explore();
+  }
+  public static void testGreyScale(){
+    Picture beach =new Picture("beach.jpg");
+    beach.greyScale();
+    beach.explore();
+  }
+
+
+
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -57,24 +85,29 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
+
+    Picture beach=new Picture("beach.jpg");
+    beach.explore();
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testGreyScale();
+    //testNegate();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorVertical();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

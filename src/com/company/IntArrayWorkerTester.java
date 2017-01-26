@@ -102,5 +102,6 @@ public class IntArrayWorkerTester
     testGetTotalNested();
     testGetLargest();
     testGetColTotal();
+
   }
 }
