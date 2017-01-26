@@ -230,5 +230,16 @@ public class Picture extends SimplePicture
     beach.zeroBlue();
     beach.explore();
   }
-  
+  public void edgeDetect(int edgeDistance){
+    Pixel[][] pixels=this.getPixels2D();
+    for(int r=0; r<pixels.length;r++){
+      for (int col=0;col<pixels[r].length-1;col++){
+        if (pixels[r][col].colorDistance(pixels[r][col+1].getColor())<edgeDistance)
+          pixels[r][col].setColor(Color.WHITE);
+        else
+          pixels[r][col].setColor(Color.BLACK);
+      }
+    }
+  }
+
 } // this } is the end of class Picture, put all new methods before this
